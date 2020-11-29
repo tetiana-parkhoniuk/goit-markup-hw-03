@@ -13,6 +13,8 @@
 }
 
 body {
+  margin: 0;
+
   font-family: var(--main-font);
   font-weight: 400;
   font-size: 14px;
@@ -36,9 +38,37 @@ button {
   border: none;
 }
 
+img {
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+p {
+  margin: 0;
+  padding: 0;
+}
+
 /* Components */
 
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+  outline: 2px solid orange;
+}
+
 .logo {
+  padding-top: 24px;
+  padding-bottom: 25px;
+  margin-right: 93px;
+
   font-family: var(--secondary-font);
   font-weight: 700;
   font-size: 26px;
@@ -48,7 +78,14 @@ button {
   color: var(--dark-logo-text-color);
 }
 
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
 .section-title {
+  margin-bottom: 50px;
+
   font-weight: 700;
   font-size: 36px;
   line-height: 1.166;
@@ -59,11 +96,30 @@ button {
 
 /* Navigation */
 
+.main-nav {
+  display: flex;
+  align-items: center;
+}
+
 .logo-accent {
   color: var(--accent-color);
 }
 
+.nav-list {
+  display: flex;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+.nav-list .nav-item + .nav-item {
+  margin-left: 50px;
+}
+
 .nav-link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
   font-weight: 500;
   line-height: 1.142;
   letter-spacing: 0.02em;
@@ -83,7 +139,25 @@ button {
   color: var(--accent-color);
 }
 
+.contact-info {
+  margin-left: auto;
+}
+.contact-info-list {
+  display: flex;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+.contact-info-item + .contact-info-item {
+  margin-left: 50px;
+}
+
 .contact-info-link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   font-family: inherit;
   font-weight: 500;
   line-height: 1.142;
@@ -96,13 +170,16 @@ button {
 
 .hero {
   background-color: var(--dark-background-color);
+  text-align: center;
 }
 
 .hero-title {
+  margin-top: 0;
+  margin-bottom: 30px;
+
   font-weight: 900;
   font-size: 44px;
   line-height: 1.363;
-  text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
 
@@ -110,6 +187,10 @@ button {
 }
 
 .hero-btn {
+  min-width: 200px;
+  border-radius: 4px;
+  padding: 10px 32px;
+
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
@@ -123,13 +204,26 @@ button {
 
 /* Features */
 
+.features-list {
+  display: flex;
+}
+
+.feature-item + .feature-item {
+  margin-left: 30px;
+}
+
 .feature-title {
+  margin-bottom: 10px;
+
   font-weight: 700;
   line-height: 1.142;
   text-transform: uppercase;
 }
 
 .feature-description {
+  display: inline-block;
+  min-width: 270px;
+
   line-height: 1.714;
 
   color: var(--secondary-text-color);
@@ -137,8 +231,47 @@ button {
 
 /* Scope */
 
+.scope.section {
+  padding-top: 0;
+}
+
+.scope-list {
+  display: flex;
+  justify-content: space-between;
+}
+
 /* Team */
+
+.team.section {
+  background-color: var(--light-bakground-color);
+}
+
+.team-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.team-list-item {
+}
+
+.team-text-container {
+  display: inline-block;
+  min-width: 270px;
+  padding: 30px 60px;
+  border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  text-align: center;
+
+  background-color: var(--light-theme-color);
+}
+
+.team-list-img {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14);
+}
+
 .team-title {
+  margin-bottom: 10px;
+
   font-weight: 500;
   font-size: 16px;
   line-height: 1.187;
@@ -153,7 +286,16 @@ button {
 
 /* Address */
 
+footer .logo {
+  display: inline-block;
+  margin-bottom: 20px;
+  margin-right: 0;
+  padding: 0;
+}
+
 .address {
+  padding-top: 60px;
+  padding-bottom: 60px;
   background-color: var(--dark-background-color);
 }
 
@@ -162,6 +304,7 @@ button {
 }
 
 .address-link {
+  display: inline-block;
   line-height: 1.714;
 
   color: var(--light-address-link-color);
@@ -171,6 +314,10 @@ button {
 .address-link:focus {
   color: var(--light-theme-color);
   scroll-behavior: smooth;
+}
+
+.address-list-item:not(:last-child) {
+  margin-bottom: 9px;
 }
 
 /* ======= STUDIO END ======= */
